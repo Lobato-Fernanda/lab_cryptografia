@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Criptografia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h2>🔐 Criptografia Híbrida</h2>
+
+<form method="POST">
+    <textarea name="message" placeholder="Digite sua mensagem"></textarea><br>
+    <button type="submit">Criptografar</button>
+</form>
+
+{% if encrypted %}
+    <h3>Criptografado:</h3>
+    <p>{{ encrypted }}</p>
+
+    <h3>Descriptografado:</h3>
+    <p>{{ decrypted }}</p>
+{% endif %}
+
+</body>
+</html>
